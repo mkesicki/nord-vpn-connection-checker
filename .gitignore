@@ -16,6 +16,9 @@
 # Mono auto generated files
 mono_crash.*
 
+NordVPNCheck/bin
+NordVPNCheck/obj
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
