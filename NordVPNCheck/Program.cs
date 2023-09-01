@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Drawing;
 using System.Configuration;
 using Microsoft.Win32;
+using NordVPNCheck.Properties;
 
 namespace NordVPNCheck
 {
@@ -47,7 +48,7 @@ namespace NordVPNCheck
             Console.WriteLine("App started");
 
             this.WindowState = FormWindowState.Minimized;         
-            this.Icon = new Icon("app.ico");
+            this.Icon = (Icon)Resources.ResourceManager.GetObject("app"); 
             this.Visible = false;
             this.ShowInTaskbar = false;
 
@@ -62,7 +63,7 @@ namespace NordVPNCheck
            
             // Initialize system tray icon
             trayIcon = new NotifyIcon();
-            trayIcon.Icon = new Icon("warning.ico");  // Replace with your icon file           
+            trayIcon.Icon = (Icon)Resources.ResourceManager.GetObject("warning"); 
             trayIcon.Visible = true;
             trayIcon.Text = "Status Uknown!";
 
@@ -92,20 +93,20 @@ namespace NordVPNCheck
                 {
                     Console.WriteLine("Found!");
                     // Selected text is found in the response
-                    trayIcon.Icon = new Icon("ok.ico");  // Replace with success icon
+                    trayIcon.Icon = (Icon)Resources.ResourceManager.GetObject("ok");
                     trayIcon.Text = "You are protected!";
                 }
                 else
                 {
                     Console.WriteLine("NOT Found!");
                     // Selected text is not found in the response
-                    trayIcon.Icon = new Icon("nook.ico");  // Replace with failure icon
+                    trayIcon.Icon = (Icon)Resources.ResourceManager.GetObject("nook");
                     trayIcon.Text = "You are NOT protected!";
 
                 }
             }
             catch (Exception ex)            {
-                trayIcon.Icon = new Icon("warning.ico");  // Replace with error icon
+                trayIcon.Icon = (Icon)Resources.ResourceManager.GetObject("warning"); 
                 trayIcon.Text = "Error checking status";
             }
         }
