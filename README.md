@@ -11,6 +11,7 @@ There is no form or icon in taskbar.
 
 I am very often jumping between servers in different countries also my router is configured to use VPN by default. I was tired to checking if I am on VPN or not so
 created this. I used ChatGPT & GitHub Copilot to help also to check how they works.
+
 Quite impressive is the answer :)
 
 .... nope I am not doing anything illegal -> not the reason to have VPN in this case
